@@ -1,5 +1,13 @@
 # VisCount
 
+A versatile visualization tool for exploring count data
+
+Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, Allen Rodrigo<sup>1</sup>, David Lovell<sup>3</sup>
+
+<sup>1</sup>Australian National University, Canberra, ACT, Australia<br />
+<sup>2</sup>Duke University, Durham, North Carolina, USA<br />
+<sup>3</sup>Queensland University of Technology, Brisbane, Queensland, Australia<br />
+
 ## Description
 Visualisation tool for count compositional data and associated factors in R. If you provide this program with a file containing relative count data (such as outut from QIIME), it will generate an interactive plot in the browser that will:
 

@@ -1,15 +1,18 @@
 # VisCount
 
 ## Description
-Visualisation tool for count compositional data and associated factors in R.
+Visualisation tool for count compositional data and associated factors in R. If you provide this program with a file containing relative count data (such as outut from QIIME), it will generate an interactive plot in the browser that will:
 
-resize
-0-3 factors
-count data
-coloured, filtered
-log
+* Compare the abundance of two different count data variables against one another and select which variables to compare interactively
+* Visualise and filter data for up to 3 different factors
+* Zoom in to regions of the plot: the program works out the best scale to use
+* Interactively modify the opacity and size of your datapoints
+* The stroke (line around points) can be interactively thickened to become the main feature of the point
+* Select whether or not you want to log your data and what to replace 0 values with
 
-![alt text](images/program_pic.png)
+This tool enables you to quickly investigate and visualise relationships within your dataset.
+
+![image of program in action](images/program_pic.png)
 
 ## Demonstration
 
@@ -25,7 +28,7 @@ This program requires the R programming environment, which is freely [available 
 
 Data is required to be in the form of a CSV (comma separated file) or TSV (tab separated file) and to have a header for each column. Factors should be in their own column, and you can have between 0-3 factors.
 
-![alt text](images/data_layout.png)
+![how data looks](images/data_layout.png)
 
 For an example of the correct data structure, please see the example dataset in the "data" directory.
 
@@ -47,7 +50,7 @@ Command | Purpose
 `Species` | Second factor in data
 `Individual` | Third factor in data
 
-Please note that the order you write this in is important - while you can vary the number of factors based on how many are present in your dataset, the factors you name must always come last when you run the program, even if there are none.
+Please note that the order you write this command in is important - while you can vary the number of factors based on how many are present in your dataset, the factors you name must always come last when you run the program, even if there are none.
 
 ## Factors
 
@@ -58,36 +61,21 @@ Command | Purpose
 Zero factors | The points will be plotted without colour.
 One factor | Points will be coloured and filtered based on this factor.
 Two factors | Points will be filtered based on both factors. The factor with the most levels will be used to colour the points, while the other factor will provide the coloured stroke around the points.
-Three factors | Points will be filtered based on all 3 factors. Same as with 2 factors except the factor with the fewest levels will be used to set the shape of the points.
+Three factors | Points will be filtered based on all 3 factors. Same as with 2 factors and the factor with the fewest levels will be used to set the shape of the points.
+
+Please note that you cannot uncheck and filter all the values for a factor when visualising the data - this will result in all the points being replotted to avoid an empty figure.
 
 ## Logging Data
 
-If you do not wish to have a log transform applied to your data, run the program with a 0 value instead of a value to replace the 0s with.
+If you do not wish to have a log transform applied to your data, run the program with a 0 value instead of another value to replace the 0s with.
+
+## Uses
+
+* Metagenomics data output from QIIME
 
 ## Advanced Use
 
-
+The section of the code that generates this graphic has been contained in the `visualisation()` function within the "visualisation.R" file. Feel free to tinker with the code for your own use, just please provide attribution.
 
 ## Licence
-
-
-#### Name:
-Int3n
-#### Purpose:
-Data visualisation demo using ggvis and data from the HMP
-#### Version:
-1.0
-#### Licence:
-MIT Licence
-#### Author:
-Jack Simpson (jack@jacksimpson.co)
-
-#-------------------------------------------------------------------------------
-
-
-
-
-- [x] This
-
-1. First
-2. Second
+This software is shared under the [MIT license](http://choosealicense.com/licenses/mit/) which means you're free to do whatever you like with the code so long as you provide attribution.

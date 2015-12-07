@@ -1,4 +1,13 @@
 #!/usr/bin/env Rscript
+#-------------------------------------------------------------------------------
+# Name:         VisCount
+# Purpose:      Count compositional data visualisation tool
+# Version:      1.0
+# Licence:      MIT Licence
+# Author:       Jack Simpson
+# Email:        jack@jacksimpson.co
+# Created:      2015-02-12
+#-------------------------------------------------------------------------------
 
 rm(list=ls())               # clear workspace variables
 source("visualisation.R")   # load functions

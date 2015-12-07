@@ -1,4 +1,13 @@
 #!/usr/bin/env Rscript
+#-------------------------------------------------------------------------------
+# Name:         VisCount
+# Purpose:      Count compositional data visualisation tool
+# Version:      1.0
+# Licence:      MIT Licence
+# Author:       Jack Simpson
+# Email:        jack@jacksimpson.co
+# Created:      2015-02-12
+#-------------------------------------------------------------------------------
 
 visualise.data <- function(data, all_factors, log_min_value = 0){
     stopifnot(length(all_factors) < 4)

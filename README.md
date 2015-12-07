@@ -2,6 +2,8 @@
 
 A versatile visualization tool for exploring count data
 
+## Authors
+
 Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, Allen Rodrigo<sup>1</sup>, David Lovell<sup>3</sup>
 
 <sup>1</sup>Australian National University, Canberra, ACT, Australia<br />

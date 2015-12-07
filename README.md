@@ -1,17 +1,9 @@
 # VisCount
 
-A versatile visualization tool for exploring count data
-
-## Authors
-
-Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, Allen Rodrigo<sup>1</sup>, David Lovell<sup>3</sup>
-
-<sup>1</sup>Australian National University, Canberra, ACT, Australia<br />
-<sup>2</sup>Duke University, Durham, North Carolina, USA<br />
-<sup>3</sup>Queensland University of Technology, Brisbane, Queensland, Australia<br />
-
 ## Description
-Visualisation tool for count compositional data and associated factors in R. If you provide this program with a file containing relative count data (such as outut from QIIME), it will generate an interactive plot in the browser that will:
+A versatile visualization tool for exploring count data.
+
+If you provide this program with a file containing relative count data (such as outut from QIIME), it will generate an interactive plot in the browser that will:
 
 * Compare the abundance of two different count data variables against one another and select which variables to compare interactively
 * Visualise and filter data for up to 3 different factors
@@ -24,12 +16,12 @@ This tool enables you to quickly investigate and visualise relationships within 
 
 ![image of program in action](images/program_pic.png)
 
+## Paper
+In progress.
+
 ## Demonstration
 
 A demonstration of the tool on the example lemur dataset will be available on a website shortly.
-
-## Paper
-In progress.
 
 ## Program Requirements
 This program requires the R programming environment, which is freely [available here](https://www.r-project.org/). This tool uses the [ggvis](https://cran.r-project.org/web/packages/ggvis/index.html) and [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html) packages, although it will install these automatically when you run the program for the first time.
@@ -86,6 +78,14 @@ If you do not wish to have a log transform applied to your data, run the program
 ## Advanced Use
 
 The section of the code that generates this graphic has been contained in the `visualisation()` function within the "visualisation.R" file. Feel free to tinker with the code for your own use, just please provide attribution.
+
+## Authors
+
+Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, Allen Rodrigo<sup>1</sup>, David Lovell<sup>3</sup>
+
+<sup>1</sup>Australian National University, Canberra, ACT, Australia<br />
+<sup>2</sup>Duke University, Durham, North Carolina, USA<br />
+<sup>3</sup>Queensland University of Technology, Brisbane, Queensland, Australia<br />
 
 ## Licence
 This software is shared under the [MIT license](http://choosealicense.com/licenses/mit/) which means you're free to do whatever you like with the code so long as you provide attribution.

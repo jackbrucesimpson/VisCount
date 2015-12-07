@@ -1,16 +1,6 @@
 #!/usr/bin/env Rscript
-#-------------------------------------------------------------------------------
-# Name:         Int3n
-# Purpose:      Data visualisation demo using ggvis and data from the HMP
-# Version:      1.0
-# Licence:      MIT Licence
-# Author:       Jack Simpson
-# Email:        jack@jacksimpson.co
-# Created:      2015-02-12
-#-------------------------------------------------------------------------------
 
-visualise.data <- function(data, all_factors, log_min_value = 0) # , log_min_value = 0   filtered_factor, shape_factor, stroke_factor
-{
+visualise.data <- function(data, all_factors, log_min_value = 0){
     stopifnot(length(all_factors) < 4)
     
     list_unique_factors_per_col <- list()
@@ -157,4 +147,20 @@ visualise.data <- function(data, all_factors, log_min_value = 0) # , log_min_val
         
     }
     
+}
+
+install.load.packages <- function(packages){
+    
+    for (i in 1:length(packages)) {
+        if (packages[i] %in% installed.packages()[,"Package"]){
+            print(paste(packages[i], "is installed", sep=" "))
+        }
+        else{
+            print(paste("Installing package:", packages[i], sep=" "))
+            install.packages(packages[i])
+        }
+    }
+    
+    # load all packages
+    lapply(packages, library, character.only = T)
 }

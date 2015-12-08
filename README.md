@@ -15,7 +15,7 @@ If you provide this program with a file containing relative count data (such as 
 
 ![image of program in action](images/program_pic.png)
 
-** Include pictures showing the filter in action **
+__Include pictures showing the filter in action__
 
 ## Paper
 In progress.

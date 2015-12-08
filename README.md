@@ -1,20 +1,21 @@
 # VisCount
 
 ## Description
-A versatile visualization tool for exploring count data.
+A versatile visualization tool for exploring count data. This tool enables you to quickly investigate and visualise relationships within your dataset.
 
-If you provide this program with a file containing relative count data (such as outut from QIIME), it will generate an interactive plot in the browser that will:
+If you provide this program with a file containing relative count data (such as output from QIIME), it will generate an interactive plot in the browser that will:
 
 * Compare the abundance of two different count data variables against one another and select which variables to compare interactively
 * Visualise and filter data for up to 3 different factors
-* Zoom in to regions of the plot: the program works out the best scale to use
+* Zoom in to regions of the plot: the program calculates the best scale to use
 * Interactively modify the opacity and size of your datapoints
 * The stroke (line around points) can be interactively thickened to become the main feature of the point
 * Select whether or not you want to log your data and what to replace 0 values with
-
-This tool enables you to quickly investigate and visualise relationships within your dataset.
+* Download the plot you have customised
 
 ![image of program in action](images/program_pic.png)
+
+** Include pictures showing the filter in action **
 
 ## Paper
 In progress.
@@ -52,7 +53,7 @@ Command | Purpose
 `Species` | Second factor in data
 `Individual` | Third factor in data
 
-Please note that the order you write this command in is important - while you can vary the number of factors based on how many are present in your dataset, the factors you name must always come last when you run the program, even if there are none.
+Please note that the order of the parameters in the command is important: while you can vary the number of factors (from 0-3), the factors you name must always come last when you run the program.
 
 ## Factors
 
@@ -65,11 +66,11 @@ One factor | Points will be coloured and filtered based on this factor.
 Two factors | Points will be filtered based on both factors. The factor with the most levels will be used to colour the points, while the other factor will provide the coloured stroke around the points.
 Three factors | Points will be filtered based on all 3 factors. Same as with 2 factors and the factor with the fewest levels will be used to set the shape of the points.
 
-Please note that you cannot uncheck and filter all the values for a factor when visualising the data - this will result in all the points being replotted to avoid an empty figure.
+Please note that if none of the factor levels are checked, all points will be automatically replotted to avoid an empty figure.
 
 ## Logging Data
 
-If you do not wish to have a log transform applied to your data, run the program with a 0 value instead of another value to replace the 0s with.
+If you do not wish to have a log transform applied to your data, retain all 0s when you run the program.
 
 ## Uses
 

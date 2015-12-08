@@ -42,7 +42,7 @@ Once you have installed R and navigated into the VisCount directory in terminal,
 
 This line has 8 words in it that do the following things:
 
-Command | Purpose
+Parameter | Purpose
 --- | ---
 `Rscript`| Calling the R language
 `VisCount.R` | VisCount Program
@@ -59,12 +59,12 @@ Please note that the order of the parameters in the command is important: while 
 
 The VisCount program can support up to three factors. Depending on how many factors your dataset contains, the following will happen:
 
-Command | Purpose
---- | ---
-Zero factors | The points will be plotted without colour.
-One factor | Points will be coloured and filtered based on this factor.
-Two factors | Points will be filtered based on both factors. The factor with the most levels will be used to colour the points, while the other factor will provide the coloured stroke around the points.
-Three factors | Points will be filtered based on all 3 factors. Same as with 2 factors and the factor with the fewest levels will be used to set the shape of the points.
+Factors | Action
+:---: | :---
+0 | The points will be plotted without colour. 
+1 | Points will be coloured and filtered based on this factor.
+2 | Points will be filtered based on both factors. The factor with the most levels will be used to colour the points, while the other factor will provide the coloured stroke around the points.
+3 | Points will be filtered based on all 3 factors. Same as with 2 factors and the factor with the fewest levels will be used to set the shape of the points.
 
 Please note that if none of the factor levels are checked, all points will be automatically replotted to avoid an empty figure.
 

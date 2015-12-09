@@ -119,6 +119,10 @@ visualise.data <- function(data, all_factors, log_min_value = 0){
         uf2 <- list_unique_factors_per_col[[index_factors_by_num_unique[[2]]]]
         uf3 <- list_unique_factors_per_col[[index_factors_by_num_unique[[3]]]]
         
+        if (length(uf3) > 6){
+            print("WARNING: You have more than 6 levels in your shape factor - some shapes will be repeated!")
+        }
+        
         graphic <- data %>% 
             ggvis(x = input_select(objects.to.plot, map = as.name, label = "X Axis", selected = objects.to.plot[[1]]), 
                   y = input_select(objects.to.plot, map = as.name, label = "Y Axis", selected = objects.to.plot[[2]])  ) %>%

@@ -15,6 +15,8 @@ If you provide this program with a file containing relative count data (such as 
 
 ![image of program in action](images/program_pic.png)
 
+To increase the size of the plot (if it is too small or parts are not visible), please click the little triangle icon on the bottom-right of the figure and drag down to the expand the plot.
+
 __Include pictures showing the filter in action__
 
 ## Paper
@@ -61,16 +63,20 @@ The VisCount program can support up to three factors. Depending on how many fact
 
 Factors | Action
 :---: | :---
-0 | The points will be plotted without colour. 
+0 | The points will be plotted without colour.
 1 | Points will be coloured and filtered based on this factor.
 2 | Points will be filtered based on both factors. The factor with the most levels will be used to colour the points, while the other factor will provide the coloured stroke around the points.
-3 | Points will be filtered based on all 3 factors. Same as with 2 factors and the factor with the fewest levels will be used to set the shape of the points.
+3 | Points will be filtered based on all 3 factors. Same as with 2 factors and the factor with the fewest levels will be used to set the shape of the points. Please ensure that this factor has 6 or fewer levels, as there are only so many shapes we can use before we have to repeat them in the legend.
 
 Please note that if none of the factor levels are checked, all points will be automatically replotted to avoid an empty figure.
 
 ## Logging Data
 
 If you do not wish to have a log transform applied to your data, retain all 0s when you run the program.
+
+## Saving Figures
+
+Figures can be downloaded by clicking the gear icon in the top left of the page and selecting the SVG or canvas option.
 
 ## Uses
 

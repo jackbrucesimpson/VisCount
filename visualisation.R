@@ -122,13 +122,15 @@ visualise.data <- function(data, all_factors, log_min_value = 0){
         graphic <- data %>% 
             ggvis(x = input_select(objects.to.plot, map = as.name, label = "X Axis", selected = objects.to.plot[[1]]), 
                   y = input_select(objects.to.plot, map = as.name, label = "Y Axis", selected = objects.to.plot[[2]])  ) %>%
-            #, shape= ~factor(get(all_factors[[index_factors_by_num_unique[[3]]]]))
+
             add_axis("x", title = "X Axis Variable", title_offset = 80) %>%
             add_axis("y", title = "Y Axis Variable", title_offset = 80) %>%
             
-            filter(data[[all_factors[[index_factors_by_num_unique[[1]]]]]] %in% eval(input_checkboxgroup(uf1, selected = uf1)) &
-                       data[[all_factors[[index_factors_by_num_unique[[2]]]]]] %in% eval(input_checkboxgroup(uf2, selected = uf2)) &
-                       data[[all_factors[[index_factors_by_num_unique[[3]]]]]] %in% eval(input_checkboxgroup(uf3, selected = uf3))
+            filter(
+                data[[all_factors[[index_factors_by_num_unique[[3]]]]]] %in% eval(input_checkboxgroup(uf3, selected = uf3)) &
+                data[[all_factors[[index_factors_by_num_unique[[2]]]]]] %in% eval(input_checkboxgroup(uf2, selected = uf2)) &
+                data[[all_factors[[index_factors_by_num_unique[[1]]]]]] %in% eval(input_checkboxgroup(uf1, selected = uf1))
+                       
             ) %>%
             
             scale_ordinal("fill", domain=uf1) %>%
@@ -147,8 +149,8 @@ visualise.data <- function(data, all_factors, log_min_value = 0){
             scale_numeric("y", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "Y range")) %>%
             
             add_legend(scales = "shape", properties = legend_props(legend = list(y = 0))) %>%
-            add_legend(scales = "fill", properties = legend_props(legend = list(y = 100))) %>%
-            add_legend(scales = "stroke", properties = legend_props(legend = list(y = 350))) %>%
+            add_legend(scales = "stroke", properties = legend_props(legend = list(y = (length(uf3)*25)))) %>%
+            add_legend(scales = "fill", properties = legend_props(legend = list(y = ((length(uf3)+length(uf2))*20)))) %>%
             
             set_options(duration = 0) %>% view_dynamic()
          

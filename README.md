@@ -38,7 +38,7 @@ Data is required to be in the form of a CSV (comma separated file) or TSV (tab s
 For an example of the correct data structure, please see the example dataset in the "data" directory.
 
 ## Example
-Once you have installed R and navigated into the VisCount directory in terminal, you can run the program using the example lemur dataset provided in the "data" directory:
+Once you have installed R and navigated into the VisCount directory in terminal (for instructions on how to use the terminal, please see the terminal section later in this documentation), you can run the program using the example lemur dataset provided in the "data" directory:
 
 `Rscript VisCount.R data/lemurs.txt tab 0.000001 Life.stage Species Individual`
 
@@ -80,11 +80,23 @@ Figures can be downloaded by clicking the gear icon in the top left of the page 
 
 ## Uses
 
-* Metagenomics data output from QIIME
+* Metagenomics data output from QIIIME
 
 ## Advanced Use
 
 The section of the code that generates this graphic has been contained in the `visualisation()` function within the "visualisation.R" file. Feel free to tinker with the code for your own use, just please provide attribution.
+
+## Using the terminal
+
+In order to run the R program to generate the interactive figure, you'll need to navigate into the VisCount folder you downloaded via the terminal. To simplify things, you can copy your file into the data folder located within the VisCount folder.
+
+Assuming you have copied the VisCount folder into your home directory on Mac or Linux, then to navigate into this folder you should open up the terminal and type in:
+
+`cd ~/VisCount-master`
+
+Once this has worked, you can then run the command to visualise your data:
+
+`Rscript VisCount.R data/FILENAME.txt tab 0.000001 factor1 factor2 factor3`
 
 ## Authors
 

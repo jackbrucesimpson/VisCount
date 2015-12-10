@@ -35,7 +35,7 @@ This program requires the R programming environment, which is freely [available 
 
 Data is required to be in the form of a CSV (comma separated file) or TSV (tab separated file) and to have a header for each column. Factors should be in their own column, and you can have between 0-3 factors.
 
-![how data looks](images/data_layout.png)
+![how data looks](images/short.png)
 
 For an example of the correct data structure, please see the example dataset in the "data" directory.
 
@@ -102,7 +102,7 @@ Once this has worked, you can then run the command to visualise your data:
 
 ## Authors
 
-Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, Allen Rodrigo<sup>1</sup>, David Lovell<sup>3</sup>
+Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, David Lovell<sup>3</sup>
 
 <sup>1</sup>Australian National University, Canberra, ACT, Australia<br />
 <sup>2</sup>Duke University, Durham, North Carolina, USA<br />

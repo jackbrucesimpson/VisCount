@@ -108,5 +108,9 @@ Once this has worked, you can then run the command to visualise your data:
 <sup>2</sup>Duke University, Durham, North Carolina, USA<br />
 <sup>3</sup>Queensland University of Technology, Brisbane, Queensland, Australia<br />
 
+Jack Simpson | Erin McKenney | David Lovell
+:---: | :---: | :---:
+![Jack Simpson](images/jack.jpg)  | ![Erin McKenney](images/McKenney.jpg) | ![David Lovell](images/lovell.jpg)
+
 ## Licence
 This software is shared under the [MIT license](http://choosealicense.com/licenses/mit/) which means you're free to do whatever you like with the code so long as you provide attribution.

@@ -17,7 +17,9 @@ If you provide this program with a file containing relative count data (such as 
 
 To increase the size of the plot (if it is too small or parts are not visible), please click the little triangle icon on the bottom-right of the figure and drag down to the expand the plot.
 
-__Include pictures showing the filter in action__
+## Tutorial
+
+Erin has put together a data exploration tutorial using her data which is available in the `Tutorial.md` [file in this repoistory](Tutorial.md).
 
 ## Paper
 In progress.

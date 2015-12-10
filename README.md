@@ -102,7 +102,7 @@ Once this has worked, you can then run the command to visualise your data:
 
 ## Authors
 
-Jack Bruce Simpson<sup>1</sup>, Erin A. McKenney<sup>2</sup>, David Lovell<sup>3</sup>
+[Jack Bruce Simpson](http://www.jacksimpson.co/)<sup>1</sup>, [Erin A. McKenney](https://sites.google.com/site/mckenneyscientist/home)<sup>2</sup>, [David Lovell](http://staff.qut.edu.au/staff/lovelldr/)<sup>3</sup>
 
 <sup>1</sup>Australian National University, Canberra, ACT, Australia<br />
 <sup>2</sup>Duke University, Durham, North Carolina, USA<br />

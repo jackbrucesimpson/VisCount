@@ -1,5 +1,8 @@
 # Data Exploration Tutorial
 
+## Exploring lemur microbiome data
+![Erin McKenney](images/McKenney.jpg)
+
 I decided to compare Clostridia and Bacilli, two classes within Phylum Firmicutes. Firmicutes comprises a majority component of the mammalian gut microbiome. Both classes contain several known pathogens; however, Clostria are distinguished from Bacilli by their lack of aerobic respiration. Because the gut is anearobic, this makes Clostria better adapted to that environment.
 
 ![](images/plot1.png)

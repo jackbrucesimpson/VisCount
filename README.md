@@ -15,6 +15,30 @@ If you provide this program with a file containing relative count data (such as 
 * Select whether or not you want to log your data and what to replace 0 values with
 * Download the plot you have customised
 
+
+<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+
+- [Description](#description)
+- [Demonstration](#demonstration)
+- [Using VisCount](#using-viscount)
+		- [Program Requirements](#program-requirements)
+		- [Using the terminal](#using-the-terminal)
+		- [Data Requirements](#data-requirements)
+		- [Example](#example)
+		- [Factors](#factors)
+		- [Logging Data](#logging-data)
+		- [Saving Figures](#saving-figures)
+- [Tutorial](#tutorial)
+- [Applications](#applications)
+- [Advanced](#advanced)
+- [Citing VisCount](#citing-viscount)
+- [Authors](#authors)
+- [Licence](#licence)
+<!-- /TOC -->
+
+
+
+
 # Demonstration
 
 An interactive demonstration of the tool using the lemur dataset will be available on a website shortly. This will allow you to try out VisCount in the browser without having to install a thing.

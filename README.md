@@ -21,20 +21,19 @@ If you provide this program with a file containing relative count data (such as 
 - [Description](#description)
 - [Demonstration](#demonstration)
 - [Using VisCount](#using-viscount)
-		- [Program Requirements](#program-requirements)
-		- [Using the terminal](#using-the-terminal)
-		- [Data Requirements](#data-requirements)
-		- [Example](#example)
-		- [Factors](#factors)
-		- [Logging Data](#logging-data)
-		- [Saving Figures](#saving-figures)
+    - [Program Requirements](#program-requirements)
+    - [Using the terminal](#using-the-terminal)
+    - [Data Requirements](#data-requirements)
+    - [Example](#example)
+    - [Factors](#factors)
+    - [Logging Data](#logging-data)
+    - [Saving Figures](#saving-figures)
 - [Tutorial](#tutorial)
 - [Applications](#applications)
 - [Advanced](#advanced)
 - [Citing VisCount](#citing-viscount)
 - [Authors](#authors)
 - [Licence](#licence)
-<!-- /TOC -->
 
 
 

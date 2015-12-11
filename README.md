@@ -1,4 +1,4 @@
-<img align="center" src="images/VisCount.jpg" alt="viscount logo">
+<p align="center"><img src="images/VisCount.jpg" alt="viscount logo"></p>
 
 # Description
 VisCount is a versatile visualisation tool for exploring count data. This tool enables you to quickly investigate and visualise relationships within your dataset.

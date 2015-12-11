@@ -1,4 +1,4 @@
-<p align="center"><img src="images/VisCount.jpg" alt="viscount logo"></p>
+![viscount logo](images/VisCount.jpg)
 
 # Description
 VisCount is a versatile visualisation tool for exploring count data. This tool enables you to quickly investigate and visualise relationships within your dataset.
@@ -34,9 +34,6 @@ If you provide this program with a file containing relative count data (such as 
 - [Authors](#authors)
 - [Licence](#licence)
 
-
-
-
 # Demonstration
 
 An interactive demonstration of the tool using the lemur dataset will be available on a website shortly. This will allow you to try out VisCount in the browser without having to install a thing.
@@ -58,7 +55,7 @@ Once this has worked, you can then run the command to visualise your data:
 
 `Rscript VisCount.R data/FILENAME.txt tab 0.000001 factor1 factor2 factor3`
 
-These are the parameters we would need to run in order to launch the example dataset, to understand how to cutomise these commands for your own data, please read the "Example" section below
+These are the parameters we would need to run in order to launch the example dataset, to understand how to customise these commands for your own data, please read the "Example" section below
 
 To increase the size of the plot (if it is too small or parts are not visible), please click the little triangle icon on the bottom-right of the figure and drag down to the expand the plot.
 

@@ -1,4 +1,4 @@
-<center>![viscount logo](images/VisCount.jpg)</center>
+<p align="center">![viscount logo](images/VisCount.jpg)</p>
 
 # Description
 VisCount is a versatile visualisation tool for exploring count data. This tool enables you to quickly investigate and visualise relationships within your dataset.
@@ -15,8 +15,7 @@ If you provide this program with a file containing relative count data (such as 
 * Select whether or not you want to log your data and what to replace 0 values with
 * Download the plot you have customised
 
-
-<!-- TOC depth:6 withLinks:1 updateOnSave:1 orderedList:0 -->
+# Contents
 
 - [Description](#description)
 - [Demonstration](#demonstration)

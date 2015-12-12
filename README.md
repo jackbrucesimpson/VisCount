@@ -63,7 +63,9 @@ To increase the size of the plot (if it is too small or parts are not visible), 
 
 Data is required to be in the form of a CSV (comma separated file) or TSV (tab separated file) and to have a header for each column. Factors should be in their own column, and you can have between 0-3 factors.
 
-![how data looks](images/short.png)
+![how data looks](images/table-annotated.png)
+
+Components of a count or frequency table (CFT) used as input for VisCount: Row 1 contains all variables for the data set, including (A) up to three factors and (B) elements of numerical data. Rows 2-n contain sample entries, with (C) the level and (D) count or frequency data for each row-sample.
 
 For an example of the correct data structure, please see the example dataset in the "data" directory.
 

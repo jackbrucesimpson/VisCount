@@ -62,16 +62,23 @@ visualise.data <- function(data, all_factors, log_min_value = 0){
             add_axis("x", title = "X Axis Variable", title_offset = 80) %>%
             add_axis("y", title = "Y Axis Variable", title_offset = 80) %>%
             
-            scale_numeric("x", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "X range")) %>%
-            scale_numeric("y", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "Y range")) %>%
-            
-            filter(data[[all_factors[[1]]]] %in% eval(input_checkboxgroup(uf1, selected = uf1))
+            filter(
+                    data[[all_factors[[index_factors_by_num_unique[[1]]]]]] %in% eval(input_checkboxgroup(uf1, selected = uf1))
             ) %>%
             
             scale_ordinal("fill", domain=uf1) %>%
             
-            layer_points(prop("fill", as.name(all_factors[1])), size := input_slider(10, 100, label = "Point Size"), 
-                         opacity := input_slider(0, 1, label = "Opacity"))
+            layer_points(
+                prop("fill", as.name(all_factors[index_factors_by_num_unique[[1]]])), size := input_slider(10, 500, value = 50, label = "Point Size"), 
+                opacity := input_slider(0, 1, label = "Opacity")
+            ) %>%
+            
+            scale_numeric("x", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "X range")) %>%
+            scale_numeric("y", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "Y range")) %>%
+            
+            add_legend(scales = "fill", properties = legend_props(legend = list(y = 0))) %>%
+            
+            set_options(duration = 0) %>% view_dynamic()
         
         return (graphic)
         
@@ -91,24 +98,31 @@ visualise.data <- function(data, all_factors, log_min_value = 0){
             add_axis("x", title = "X Axis Variable", title_offset = 80) %>%
             add_axis("y", title = "Y Axis Variable", title_offset = 80) %>%
             
-            scale_numeric("x", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "X range")) %>%
-            scale_numeric("y", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "Y range")) %>%
-            
-            
-            filter(data[[all_factors[[index_factors_by_num_unique[[1]]]]]] %in% eval(input_checkboxgroup(uf1, selected = uf1)) &
-                       data[[all_factors[[index_factors_by_num_unique[[2]]]]]] %in% eval(input_checkboxgroup(uf2, selected = uf2))
+            filter(
+                    data[[all_factors[[index_factors_by_num_unique[[2]]]]]] %in% eval(input_checkboxgroup(uf2, selected = uf2)) &
+                    data[[all_factors[[index_factors_by_num_unique[[1]]]]]] %in% eval(input_checkboxgroup(uf1, selected = uf1))
+                
             ) %>%
             
             scale_ordinal("fill", domain=uf1) %>%
             scale_ordinal("stroke", domain=uf2) %>%
             
-            layer_points(prop("stroke", as.name(all_factors[index_factors_by_num_unique[[2]]])), strokeWidth := input_slider(1, 5, label = "Stroke Width"), 
-                         opacity := input_slider(0, 1, label = "Opacity")) %>%
+            layer_points(
+                prop("stroke", as.name(all_factors[index_factors_by_num_unique[[2]]])), strokeWidth := input_slider(0, 10, value = 1, label = "Stroke Width"),
+                prop("fill", as.name(all_factors[index_factors_by_num_unique[[1]]])), size := input_slider(10, 500, value = 50, label = "Point Size"), 
+                opacity := input_slider(0, 1, label = "Opacity")
+            ) %>%
             
-            layer_points(prop("fill", as.name(all_factors[index_factors_by_num_unique[[1]]])), size := input_slider(10, 100, label = "Point Size"), 
-                         opacity := input_slider(0, 1, label = "Opacity"))
+            scale_numeric("x", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "X range")) %>%
+            scale_numeric("y", domain = input_slider(min_take_range, max_value, c(min_take_range, max_value), step = slider_steps, label = "Y range")) %>%
+            
+            add_legend(scales = "stroke", properties = legend_props(legend = list(y = 0))) %>%
+            add_legend(scales = "fill", properties = legend_props(legend = list(y = (length(uf2)*25)))) %>%
+            
+            set_options(duration = 0) %>% view_dynamic()
         
         return (graphic)
+
     }
     
     else if (length(all_factors) == 3){

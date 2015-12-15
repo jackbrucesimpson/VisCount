@@ -17,22 +17,24 @@ If you provide this program with a file containing relative count data (such as 
 
 # Contents
 
-- [Description](#description)
-- [Demonstration](#demonstration)
-- [Using VisCount](#using-viscount)
-    - [Program Requirements](#program-requirements)
-    - [Using the terminal](#using-the-terminal)
-    - [Data Requirements](#data-requirements)
-    - [Example](#example)
-    - [Factors](#factors)
-    - [Logging Data](#logging-data)
-    - [Saving Figures](#saving-figures)
-- [Tutorial](#tutorial)
-- [Applications](#applications)
-- [Advanced](#advanced)
-- [Citing VisCount](#citing-viscount)
-- [Authors](#authors)
-- [Licence](#licence)
+* [Description](#description)
+* [Contents](#contents)
+* [Demonstration](#demonstration)
+* [Using VisCount](#using-viscount)
+    * [Program Requirements](#program-requirements)
+    * [Using the Terminal](#using-the-terminal)
+    * [Using RStudio](#using-rstudio)
+    * [Data Requirements](#data-requirements)
+    * [Example](#example)
+    * [Factors](#factors)
+    * [Logging Data](#logging-data)
+    * [Saving Figures](#saving-figures)
+* [Tutorial](#tutorial)
+* [Applications](#applications)
+* [Advanced](#advanced)
+* [Citing VisCount](#citing-viscount)
+* [Authors](#authors)
+* [Licence](#licence)
 
 # Demonstration
 
@@ -43,7 +45,7 @@ An interactive demonstration of the tool using the lemur dataset will be availab
 ### Program Requirements
 This program requires the R programming environment, which is freely [available here](https://www.r-project.org/). This tool uses the [ggvis](https://cran.r-project.org/web/packages/ggvis/index.html) and [dplyr](https://cran.r-project.org/web/packages/dplyr/index.html) packages, although it will install these automatically when you run the program for the first time.
 
-### Using the terminal
+### Using the Terminal
 
 In order to run the R program, you'll need to navigate into the VisCount folder you downloaded via the terminal. To simplify things, you can copy your the file containing your data into the data folder located within the VisCount folder.
 
@@ -58,6 +60,20 @@ Once this has worked, you can then run the command to visualise your data:
 These are the parameters we would need to run in order to launch the example dataset, to understand how to customise these commands for your own data, please read the "Example" section below
 
 To increase the size of the plot (if it is too small or parts are not visible), please click the little triangle icon on the bottom-right of the figure and drag down to the expand the plot.
+
+### Using RStudio
+
+If you open up "VisCount.R" file in RStudio, you can run the code directly from there by highlighting every line in the file and pressing control-enter. This will run the example program, although there are a few lines you will have to modify. These lines have been marked with a `#-------------------> MODIFY` comment to help them stand out.
+
+```R
+setwd("~/Research/VisCount/")
+data.file.name <- "data/lemurs.txt"
+data.file.sep <- "\t"
+csv.file.min.value <- 0.000001
+csv.file.factors <- c('Life.stage', 'Species', 'Individual')
+```
+
+The first line requires that you tell R where the directory in which VisCount and your data are located. The second line is the path and name of your data file and the third is whether this file is tab or comma delimited. You then have to tell the program if you want to log the data by giving it a min-value to replace the 0s in your dataset (if you don't want to log the data, just set this value to 0). Finally, you pass R a list of the different factors in your dataset. If you have no factors, just create an empty list like this: `csv.file.factors <- c()`.
 
 ### Data Requirements
 

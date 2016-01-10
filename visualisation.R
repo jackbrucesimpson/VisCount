@@ -168,7 +168,7 @@ visualise.data <- function(data, all_factors, log_min_value = 0){
             
             add_legend(scales = "shape", properties = legend_props(legend = list(y = 0))) %>%
             add_legend(scales = "stroke", properties = legend_props(legend = list(y = (length(uf3)*25)))) %>%
-            add_legend(scales = "fill", properties = legend_props(legend = list(y = ((length(uf3)+length(uf2))*20)))) %>%
+            add_legend(scales = "fill", properties = legend_props(legend = list(y = ((length(uf3)+length(uf2))*25)))) %>%
             
             set_options(duration = 0) %>% view_dynamic()
          
